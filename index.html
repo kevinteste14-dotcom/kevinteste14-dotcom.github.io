@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pra Sempre — 08.07.2026 💚</title>
+    <meta name="description" content="Nosso dia, nosso pra sempre.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💚</text></svg>">
+</head>
+
+<body>
+
+    <!-- === BACKGROUND LAYERS === -->
+    <div id="starfield"><canvas id="stars-canvas"></canvas></div>
+    <div class="nebula nebula-1"></div>
+    <div class="nebula nebula-2"></div>
+    <div id="particles-container"></div>
+
+    <!-- === MUSIC === -->
+    <button id="music-btn" class="music-btn" aria-label="Música">
+        <i class="fas fa-play"></i>
+    </button>
+    <audio id="bg-music" loop>
+        <source src="Musicas/musica.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- === CHAPTER NAVIGATION === -->
+    <nav class="chapter-nav" id="chapter-nav"></nav>
+
+    <!-- ═══════════════════════════════════════════
+         CAPÍTULO 1 — CAPA
+         ═══════════════════════════════════════════ -->
+    <section class="chapter chapter-cover in-view" data-chapter="0">
+        <div class="chapter-inner">
+            <div class="cover-eyebrow"><span>Quarta-feira, 8 de Julho de 2026</span></div>
+            <h1 class="cover-title">Pra Sempre Nós</h1>
+            <p class="cover-subtitle">O dia em que eu ganhei o melhor presente do mundo — você, oficialmente.</p>
+            <button id="start-btn" class="cover-cta">
+                Nossa História <i class="fas fa-chevron-down"></i>
+            </button>
+        </div>
+        <div class="scroll-line"></div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         CAPÍTULO 2 — O DIA / CONTADOR
+         ═══════════════════════════════════════════ -->
+    <section class="chapter chapter-date" data-chapter="1">
+        <div class="chapter-inner">
+            <p class="date-label">O dia que mudou tudo</p>
+            <h2 class="date-hero">08 de Julho</h2>
+            <p class="date-weekday">Quarta-feira — Oficialmente nós 💚</p>
+            <div class="counter-grid">
+                <div class="counter-cell">
+                    <span class="counter-value" id="months">0</span>
+                    <span class="counter-label">Meses</span>
+                </div>
+                <div class="counter-cell">
+                    <span class="counter-value" id="days">0</span>
+                    <span class="counter-label">Dias</span>
+                </div>
+                <div class="counter-cell">
+                    <span class="counter-value" id="hours">00</span>
+                    <span class="counter-label">Horas</span>
+                </div>
+                <div class="counter-cell">
+                    <span class="counter-value" id="minutes">00</span>
+                    <span class="counter-label">Minutos</span>
+                </div>
+                <div class="counter-cell">
+                    <span class="counter-value" id="seconds">00</span>
+                    <span class="counter-label">Segundos</span>
+                </div>
+            </div>
+            <p class="date-promise">
+                Naquela quarta-feira, começou o <em>pra sempre</em>.
+                E cada segundo desde então é meu momento favorito.
+            </p>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         CAPÍTULO 3 — NOSSA HISTÓRIA (SCROLL HORIZONTAL)
+         ═══════════════════════════════════════════ -->
+    <section class="chapter chapter-story" data-chapter="2">
+        <div class="chapter-inner">
+            <h2 class="story-title">Nossa História</h2>
+            <div class="story-scroll" id="story-scroll">
+                <div class="story-track">
+                    <div class="story-card">
+                        <span class="story-emoji">📩</span>
+                        <div class="story-date">O Começo</div>
+                        <h3>Uma Mensagem Sobre Rock</h3>
+                        <p>Quem imaginaria que uma simples mensagem sobre Rock mudaria tudo pra sempre?</p>
+                    </div>
+                    <div class="story-card">
+                        <span class="story-emoji">💬</span>
+                        <div class="story-date">As Madrugadas</div>
+                        <h3>Conversas Infinitas</h3>
+                        <p>As horas voavam e o sono não vinha. Cada conversa era melhor que a anterior.</p>
+                    </div>
+                    <div class="story-card">
+                        <span class="story-emoji">🦋</span>
+                        <div class="story-date">O Frio na Barriga</div>
+                        <h3>Quando Eu Percebi</h3>
+                        <p>Aquele frio diferente. Aquela certeza estranha. Eu soube: você era especial de verdade.</p>
+                    </div>
+                    <div class="story-card">
+                        <span class="story-emoji">🌹</span>
+                        <div class="story-date">A Coragem</div>
+                        <h3>O Pedido</h3>
+                        <p>O coração acelerado, as mãos tremendo. Mas eu sabia que valia cada risco.</p>
+                    </div>
+                    <div class="story-card story-card-highlight">
+                        <span class="story-emoji">💚</span>
+                        <div class="story-date">08/07/2026</div>
+                        <h3>O Sim Mais Lindo</h3>
+                        <p>Quarta-feira. Oficialmente nós. O melhor "sim" que eu já recebi.</p>
+                    </div>
+                    <div class="story-card">
+                        <span class="story-emoji">♾️</span>
+                        <div class="story-date">Agora e Sempre</div>
+                        <h3>Pra Sempre</h3>
+                        <p>A partir daqui, a história é nossa. Cada capítulo escrito a dois. Sem ponto final.</p>
+                    </div>
+                </div>
+            </div>
+            <p class="story-hint"><i class="fas fa-arrows-left-right"></i> Arraste para ver mais</p>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         CAPÍTULO 4 — DICIONÁRIO DO NOSSO AMOR ✨ NOVO
+         ═══════════════════════════════════════════ -->
+    <section class="chapter chapter-dictionary" data-chapter="3">
+        <div class="chapter-inner">
+            <h2 class="dict-title">Dicionário do Nosso Amor</h2>
+            <p class="dict-subtitle">Porque com você, as palavras ganham outro significado.</p>
+            <div class="dict-entries" id="dict-entries">
+                <div class="dict-entry">
+                    <div class="dict-word">Sorriso</div>
+                    <div class="dict-phonetic">/so.ˈʁi.zu/ · substantivo</div>
+                    <div class="dict-meaning">O seu, especificamente. A coisa mais bonita que eu já vi na vida. Responsável por fazer meu dia inteiro valer a pena.</div>
+                </div>
+                <div class="dict-entry">
+                    <div class="dict-word">Casa</div>
+                    <div class="dict-phonetic">/ˈka.za/ · substantivo</div>
+                    <div class="dict-meaning">Qualquer lugar onde você está. Pode ser um quarto, uma rua, uma ligação. Se você tá ali, eu tô em casa.</div>
+                </div>
+                <div class="dict-entry">
+                    <div class="dict-word">Perfeição</div>
+                    <div class="dict-phonetic">/peʁ.fej.ˈsɐ̃w̃/ · substantivo</div>
+                    <div class="dict-meaning">Você. De pijama, arrumada, com sono, de mau humor. Perfeita de qualquer jeito.</div>
+                </div>
+                <div class="dict-entry">
+                    <div class="dict-word">Saudade</div>
+                    <div class="dict-phonetic">/saw.ˈda.dʒi/ · substantivo</div>
+                    <div class="dict-meaning">O que eu sinto 5 minutos depois de me despedir de você. Crônica e sem cura.</div>
+                </div>
+                <div class="dict-entry">
+                    <div class="dict-word">Quarta-feira</div>
+                    <div class="dict-phonetic">/ˈkwaʁ.ta ˈfej.ɾa/ · substantivo</div>
+                    <div class="dict-meaning">O melhor dia da semana. Dia 8 de Julho. O dia que virou pra sempre.</div>
+                </div>
+                <div class="dict-entry">
+                    <div class="dict-word">Sorte</div>
+                    <div class="dict-phonetic">/ˈsoʁ.tʃi/ · substantivo</div>
+                    <div class="dict-meaning">O que eu tive quando você apareceu na minha vida. Sinônimo: você.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         CAPÍTULO 5 — GALERIA MOSAICO
+         ═══════════════════════════════════════════ -->
+    <section class="chapter chapter-gallery" data-chapter="4">
+        <h2 class="gallery-title">Nossos Momentos</h2>
+        <div class="mosaic">
+            <div class="mosaic-item">
+                <img src="Fotos/WhatsApp Image 2026-06-22 at 22.54.00.jpeg" alt="Nós" loading="lazy">
+                <div class="mosaic-overlay"><span>Minha pessoa favorita ✨</span></div>
+            </div>
+            <div class="mosaic-item">
+                <img src="Fotos/WhatsApp Image 2026-07-08 at 21.45.28.jpeg" alt="Nós" loading="lazy">
+                <div class="mosaic-overlay"><span>Minha deusa 💚</span></div>
+            </div>
+            <div class="mosaic-item">
+                <img src="Fotos/WhatsApp Image 2026-07-08 at 21.47.39.jpeg" alt="Nós" loading="lazy">
+                <div class="mosaic-overlay"><span>Esses olhos... 👀</span></div>
+            </div>
+            <div class="mosaic-item">
+                <img src="Fotos/WhatsApp Image 2026-07-23 at 19.21.36 (1).jpeg" alt="Nós" loading="lazy">
+                <div class="mosaic-overlay"><span>Sorriso favorito 😍</span></div>
+            </div>
+            <div class="mosaic-item">
+                <img src="Fotos/WhatsApp Image 2026-07-23 at 19.21.36 (2).jpeg" alt="Nós" loading="lazy">
+                <div class="mosaic-overlay"><span>Linda de qualquer jeito 👑</span></div>
+            </div>
+            <div class="mosaic-item">
+                <img src="Fotos/WhatsApp Image 2026-07-23 at 19.21.36 (3).jpeg" alt="Nós" loading="lazy">
+                <div class="mosaic-overlay"><span>Meu mundo inteiro 🌍</span></div>
+            </div>
+            <div class="mosaic-item">
+                <img src="Fotos/WhatsApp Image 2026-07-23 at 19.21.36.jpeg" alt="Nós" loading="lazy">
+                <div class="mosaic-overlay"><span>Minha vida 💚</span></div>
+            </div>
+            <div class="mosaic-item">
+                <img src="Fotos/WhatsApp Image 2026-07-23 at 19.21.51.jpeg" alt="Nós" loading="lazy">
+                <div class="mosaic-overlay"><span>Perfeição ✨</span></div>
+            </div>
+            <div class="mosaic-item">
+                <img src="Fotos/WhatsApp Image 2026-07-23 at 19.22.05.jpeg" alt="Nós" loading="lazy">
+                <div class="mosaic-overlay"><span>Te amo 💚</span></div>
+            </div>
+            <div class="mosaic-item">
+                <img src="Fotos/WhatsApp Image 2026-07-23 at 19.58.53.jpeg" alt="Nós" loading="lazy">
+                <div class="mosaic-overlay"><span>Meu porto seguro ⚓</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <button class="lightbox-close"><i class="fas fa-times"></i></button>
+        <img id="lightbox-img" src="" alt="Foto ampliada">
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         CAPÍTULO 6 — REPLAY DO NOSSO CHAT ✨ NOVO
+         ═══════════════════════════════════════════ -->
+    <section class="chapter chapter-chat" data-chapter="5">
+        <div class="chapter-inner">
+            <h2 class="chat-section-title">Como Tudo Começou...</h2>
+            <div class="chat-phone">
+                <div class="chat-header">
+                    <div class="chat-avatar">💚</div>
+                    <div class="chat-header-info">
+                        <span class="chat-name">Meu Amor 💚</span>
+                        <span class="chat-status">online</span>
+                    </div>
+                </div>
+                <div class="chat-body" id="chat-body">
+                    <!-- Messages will be injected by JS -->
+                </div>
+                <div class="chat-input-fake">
+                    <span>Essa história não tem fim... 💚</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         CAPÍTULO 7 — PROMESSAS PRO FUTURO ✨ NOVO
+         ═══════════════════════════════════════════ -->
+    <section class="chapter chapter-promises" data-chapter="6">
+        <div class="chapter-inner">
+            <h2 class="promises-title">Minhas Promessas Pra Você</h2>
+            <p class="promises-subtitle">Coisas que eu prometo, de agora até o pra sempre.</p>
+            <div class="promises-grid" id="promises-grid">
+                <div class="promise-card" data-promise="Estar do seu lado em todos os momentos, os bons e os difíceis.">
+                    <div class="promise-icon">🤝</div>
+                    <div class="promise-text">Estar sempre presente</div>
+                </div>
+                <div class="promise-card" data-promise="Te fazer rir pelo menos uma vez por dia, nem que eu tenha que fazer palhaçada.">
+                    <div class="promise-icon">😂</div>
+                    <div class="promise-text">Te fazer rir todo dia</div>
+                </div>
+                <div class="promise-card" data-promise="Cuidar de você quando estiver doente, triste, cansada ou quando o mundo pesar.">
+                    <div class="promise-icon">🫂</div>
+                    <div class="promise-text">Cuidar de você sempre</div>
+                </div>
+                <div class="promise-card" data-promise="Nunca ir dormir sem te dizer que te amo. Nem um dia sequer.">
+                    <div class="promise-icon">🌙</div>
+                    <div class="promise-text">Nunca dormir sem um eu te amo</div>
+                </div>
+                <div class="promise-card" data-promise="Ser teu porto seguro, teu melhor amigo, teu parceiro em tudo.">
+                    <div class="promise-icon">⚓</div>
+                    <div class="promise-text">Ser teu porto seguro</div>
+                </div>
+                <div class="promise-card" data-promise="Te amar cada dia mais do que no anterior, até quando a gente tiver velhinho.">
+                    <div class="promise-icon">💚</div>
+                    <div class="promise-text">Te amar mais a cada dia</div>
+                </div>
+            </div>
+            <div class="promise-reveal" id="promise-reveal">
+                <p id="promise-reveal-text"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         CAPÍTULO 8 — O AMPLIFICADOR DO AMOR ✨ NOVO
+         ═══════════════════════════════════════════ -->
+    <section class="chapter chapter-rock" data-chapter="7">
+        <div class="chapter-inner">
+            <h2 class="rock-title">Aumenta o Som!</h2>
+            <p class="rock-subtitle">Gire os três botões até o 11 para desbloquear uma surpresa...</p>
+            
+            <div class="amp-container" id="amp">
+                <div class="amp-header">
+                    <span class="amp-logo">NÓS</span>
+                </div>
+                <div class="amp-panel">
+                    <div class="amp-knob-group">
+                        <div class="knob-label">Amor</div>
+                        <div class="knob-container">
+                            <div class="knob" data-id="1">
+                                <div class="knob-indicator"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="amp-knob-group">
+                        <div class="knob-label">Parceria</div>
+                        <div class="knob-container">
+                            <div class="knob" data-id="2">
+                                <div class="knob-indicator"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="amp-knob-group">
+                        <div class="knob-label">Rock</div>
+                        <div class="knob-container">
+                            <div class="knob" data-id="3">
+                                <div class="knob-indicator"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="amp-power">
+                        <div class="amp-light" id="amp-light"></div>
+                        <span class="power-label">POWER</span>
+                    </div>
+                </div>
+                <div class="amp-grill">
+                    <div class="amp-ticket" id="amp-ticket">
+                        <div class="ticket-inner">
+                            <span class="ticket-header">🎸 INGRESSO VIP 🎸</span>
+                            <span class="ticket-title">O Melhor Show da Minha Vida</span>
+                            <span class="ticket-desc">Pista Premium do Meu Coração<br>Válido: PRA SEMPRE</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         CAPÍTULO 9 — PRA SEMPRE
+         ═══════════════════════════════════════════ -->
+    <section class="chapter chapter-finale" data-chapter="8">
+        <div class="chapter-inner">
+            <h1 class="finale-text">
+                Eu te amo <span class="green">pra sempre</span>
+            </h1>
+            <div class="finale-date-stamp">
+                <span>Desde 08.07.2026 — Quarta-feira</span>
+            </div>
+            <i class="fas fa-infinity finale-icon"></i>
+            <p class="finale-signed">Para sempre seu, Kevin 💚</p>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
